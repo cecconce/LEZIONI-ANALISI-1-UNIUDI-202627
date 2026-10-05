@@ -258,15 +258,16 @@ Controesempio: $f(x) = |x|$ in $x_0 = 0$ è continua ma non derivabile (c'è una
 
 L'insieme è quello dei multipli di 3: $\{0, 3, 6, 9, 12, \dots\}$.
 
-### Esercizio 4 – Aperto
+### Esercizio 4 – Contronominale con i multipli di 3
 
 **Testo:** scrivi la contronominale di "se $n^2$ non è multiplo di 3, allora $n$ non è multiplo di 3".
 
-**Mia risposta:** _da fare_
+**Mia risposta:** $n$ è multiplo di 3 ⇒ $n^2$ è multiplo di 3.
+
+**Esito:** ✅ corretta (negati tutti e due i pezzi e scambiati). Verifica: $3^2 = 9 = 3 \cdot 3$, $6^2 = 36 = 3 \cdot 12$.
 
 ---
 
 ## Dubbi aperti
 
 - Insieme delle parti $\mathcal{P}(A)$: visto alla lavagna, non ancora spiegato in chat.
-- Esercizio 4 (contronominale con i multipli di 3) ancora da risolvere.

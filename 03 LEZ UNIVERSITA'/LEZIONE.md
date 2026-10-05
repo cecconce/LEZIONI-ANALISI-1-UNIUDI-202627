@@ -270,6 +270,22 @@ L'insieme è quello dei multipli di 3: $\{0, 3, 6, 9, 12, \dots\}$.
 
 ---
 
+### Esercizio 5 – Insieme delle parti
+
+**Spiegazione:** $\wp(A)$ ("P di A", la P sta per "parti"; si scrive anche $\mathcal{P}(A)$) è l'insieme di **tutti i sottoinsiemi** di $A$, slide 31–32: $\wp(A) = \{ B : B \subseteq A \}$. Immagine: $A$ è un sacchetto di palline, $\wp(A)$ è un armadio con una scatola per ogni modo di riempirla. Gli elementi di $\wp(A)$ sono **insiemi**, non numeri. Esempio: $\wp(\{1,2\}) = \{ \emptyset, \{1\}, \{2\}, \{1,2\} \}$.
+
+| Domanda | Mia risposta | Esito |
+|---|---|---|
+| Quanti e quali elementi ha $\wp(\{5\})$? | 2: la vuota e il 5 | ✅ (si scrive $\{\emptyset, \{5\}\}$) |
+| Quanti elementi ha $\wp(\{1,2,3\})$? | 7 | ❌ sono **8**: avevo dimenticato la scatola vuota $\emptyset$ |
+| Quanti elementi ha $\wp(A)$ se $A$ ha 4 elementi? | 16 | ✅ |
+
+Sottoinsiemi di $\{1,2,3\}$: $\emptyset$; $\{1\},\{2\},\{3\}$; $\{1,2\},\{1,3\},\{2,3\}$; $\{1,2,3\}$ → $1+3+3+1 = 8$.
+
+**Regola:** se $A$ ha $n$ elementi, $\wp(A)$ ha $2^n$ elementi (ogni elemento: dentro o fuori → $2 \cdot 2 \cdots 2$).
+
+---
+
 ## Dubbi aperti
 
-- Insieme delle parti $\wp(A)$ (slide 31–32): iniziato in chat, da finire l'esercizio con $A = \{1, 2, 3\}$.
+- Nessuno: insieme delle parti chiarito (vedi Esercizio 5).

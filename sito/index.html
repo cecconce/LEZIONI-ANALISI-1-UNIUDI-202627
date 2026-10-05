@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analisi 1 · Lezioni 2026/27</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="testata"><a href="index.html">Analisi 1 · Lezioni 2026/27</a></header>
+<main>
+<h1>Lezioni di Analisi 1</h1>
+<p class="intro">I miei appunti delle lezioni di Analisi Matematica 1 (Università di Udine, a.a. 2026/27), una pagina per lezione.</p>
+<ol class="elenco">
+<li><a href="lezioni/03.html"><span class="num">03</span><span class="arg">Logica: contronominale, quantificatori, insiemi</span><span class="data">29/09/2026</span></a></li>
+</ol>
+</main>
+<footer>Appunti personali di Pierluigi Ceccon · Analisi Matematica 1, Università di Udine.
+Le slide del docente non sono riprodotte qui.</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+document.querySelectorAll('.math').forEach(function (el) {
+  try {
+    katex.render(el.textContent, el, {displayMode: el.classList.contains('display'), throwOnError: false});
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

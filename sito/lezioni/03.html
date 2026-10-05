@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 LEZ UNIVERSITA&#x27; – Logica: contronominale, quantificatori, insiemi</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="testata"><a href="../index.html">Analisi 1 · Lezioni 2026/27</a></header>
+<main>
+<h1 id="lez-universita-logica-contronominale-quantificatori-insiemi">03
+LEZ UNIVERSITA’ – Logica: contronominale, quantificatori, insiemi</h1>
+<ul>
+<li><strong>Docente:</strong> prof. Lorenzo Freddi – Analisi Matematica
+1, Università di Udine, a.a. 2026/27</li>
+<li><strong>Data della lezione:</strong> 29/09/2026 (videolezione)</li>
+<li><strong>Studiata in chat:</strong> 05/10/2026</li>
+</ul>
+<h2 id="argomenti-trattati">Argomenti trattati</h2>
+<ol type="1">
+<li>Teorema della contronominale (slide 16)</li>
+<li>Lemma: <span class="math inline">n</span> pari <span
+class="math inline">\iff n^2</span> pari, dimostrato con la
+contronominale (slide 17)</li>
+<li>Predicati <span class="math inline">P(x)</span>, quantificatori
+<span class="math inline">\forall</span> ed <span
+class="math inline">\exists</span>, insiemi definiti da una proprietà
+(lavagna)</li>
+<li>Insieme delle parti <span class="math inline">\mathcal{P}(A)</span>
+(lavagna, da studiare)</li>
+</ol>
+<h2 id="materiali-su-drive-solo-link">Materiali su Drive (solo
+link)</h2>
+<ul>
+<li><a
+href="https://drive.google.com/file/d/1K72wRUI-xyKGGE2JaSwpFnFshwy3CFT6/view?usp=drivesdk">2026_pres_01_logica_e_insiemi.pdf</a>
+– slide del prof. Freddi</li>
+<li><code>2026_pres_02_funzioni.pdf</code> – slide della lezione
+successiva: <strong>non ancora caricate su Drive</strong>, link da
+aggiungere</li>
+</ul>
+<hr />
+<h2 id="teorema-della-contronominale">Teorema della contronominale</h2>
+<h3 id="lenunciato">L’enunciato</h3>
+<p><span class="math display">P \Longrightarrow Q \quad \text{equivale
+a} \quad (\text{non } Q) \Longrightarrow (\text{non } P)</span></p>
+<p>La frase <span class="math inline">(\text{non } Q) \Rightarrow
+(\text{non } P)</span> si chiama <strong>contronominale</strong> di
+<span class="math inline">P \Rightarrow Q</span>. Le due frasi dicono
+<strong>la stessa cosa</strong>: se una è vera, è vera anche
+l’altra.</p>
+<h3 id="ricetta-per-costruirla">Ricetta per costruirla</h3>
+<ol type="1">
+<li><strong>Nego</strong> tutti e due i pezzi (“non” = negazione = il
+contrario: V diventa F, F diventa V).</li>
+<li><strong>Scambio</strong> l’ordine.</li>
+</ol>
+<p>Servono <strong>tutte e due</strong> le cose. Una sola non basta.</p>
+<h3 id="lidea-con-un-esempio">L’idea, con un esempio</h3>
+<p>Il papà (onesto) promette: <strong>“Se prendi 10, ti compro la
+bici.”</strong></p>
+<p>Il figlio torna a casa e la bici <strong>non c’è</strong>. Allora il
+figlio <strong>non ha preso 10</strong>.</p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th>Frase</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Originale</td>
+<td>se prendi 10 → bici</td>
+</tr>
+<tr class="even">
+<td>Contronominale</td>
+<td>niente bici → non hai preso 10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="la-regola-dellimplicazione">La regola dell’implicazione</h3>
+<p>“Se A, allora B” è <strong>falsa solo in un caso</strong>: A vera e B
+falsa. (Il papà mente solo se il figlio prende 10 e la bici non arriva.
+Se il figlio prende 6, la promessa non dice niente: il papà non mente
+qualunque cosa faccia.)</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">B</th>
+<th style="text-align: center;">A ⇒ B</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h3
+id="dimostrazione-con-la-tabella-di-verità-come-nella-slide">Dimostrazione
+con la tabella di verità (come nella slide)</h3>
+<p><span class="math inline">P</span> = “ha preso 10”, <span
+class="math inline">Q</span> = “c’è la bici”.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Caso</th>
+<th style="text-align: center;"><span class="math inline">P</span></th>
+<th style="text-align: center;"><span class="math inline">Q</span></th>
+<th style="text-align: center;"><span class="math inline">\text{non }
+Q</span></th>
+<th style="text-align: center;"><span class="math inline">\text{non }
+P</span></th>
+<th style="text-align: center;"><span class="math inline">P \Rightarrow
+Q</span></th>
+<th style="text-align: center;"><span class="math inline">(\text{non }
+Q) \Rightarrow (\text{non } P)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;"><strong>F</strong></td>
+<td style="text-align: center;"><strong>F</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">F</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;">V</td>
+<td style="text-align: center;"><strong>V</strong></td>
+<td style="text-align: center;"><strong>V</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Come si riempie: 1. <span class="math inline">P</span> e <span
+class="math inline">Q</span>: tutte le 4 combinazioni (VV, VF, FV, FF).
+2. <span class="math inline">\text{non } Q</span> e <span
+class="math inline">\text{non } P</span>: ribalto le colonne <span
+class="math inline">Q</span> e <span class="math inline">P</span>. 3.
+<span class="math inline">P \Rightarrow Q</span>: F solo dove <span
+class="math inline">P</span> = V e <span class="math inline">Q</span> =
+F (caso 2). 4. <span class="math inline">(\text{non } Q) \Rightarrow
+(\text{non } P)</span>: F solo dove <span class="math inline">\text{non
+} Q</span> = V e <span class="math inline">\text{non } P</span> = F (di
+nuovo caso 2).</p>
+<p><strong>Le ultime due colonne sono uguali (V, F, V, V) → le due frasi
+sono equivalenti.</strong> ∎</p>
+<h3 id="attenzione-le-due-frasi-che-non-sono-equivalenti">Attenzione: le
+due frasi che NON sono equivalenti</h3>
+<p>Partendo da “divisibile per 4 → pari”:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Nome</th>
+<th style="text-align: center;">Frase</th>
+<th style="text-align: center;">Vera?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Originale</td>
+<td style="text-align: center;">divisibile per 4 → pari</td>
+<td style="text-align: center;">✅</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>Contronominale</strong> (nego e
+scambio)</td>
+<td style="text-align: center;">non pari → non divisibile per 4</td>
+<td style="text-align: center;">✅ sempre come l’originale</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">Inversa (solo scambio)</td>
+<td style="text-align: center;">pari → divisibile per 4</td>
+<td style="text-align: center;">❌</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Contraria (solo “non”)</td>
+<td style="text-align: center;">non divisibile per 4 → non pari</td>
+<td style="text-align: center;">❌</td>
+</tr>
+</tbody>
+</table>
+<p>Controesempio per le due false: <strong>6</strong> (è pari ma non è
+divisibile per 4).</p>
+<h3 id="a-cosa-serve-davvero">A cosa serve davvero</h3>
+<p>È uno strumento di dimostrazione: se dimostrare <span
+class="math inline">P \Rightarrow Q</span> direttamente è difficile,
+dimostro <span class="math inline">\text{non } Q \Rightarrow \text{non }
+P</span>.</p>
+<p>Si usa anche negli esercizi:</p>
+<ul>
+<li><p><strong>Derivabilità.</strong> Teorema: derivabile in <span
+class="math inline">x_0</span> ⇒ continua in <span
+class="math inline">x_0</span>. Contronominale: <strong>non
+continua</strong> in <span class="math inline">x_0</span> ⇒ <strong>non
+derivabile</strong> in <span class="math inline">x_0</span>. Uso: vedo
+un salto nel grafico → lì la derivata non esiste, senza fare conti.
+(L’inversa “continua ⇒ derivabile” è falsa: <span
+class="math inline">f(x) = |x|</span> in <span
+class="math inline">0</span> è continua ma ha una punta.)</p></li>
+<li><p><strong>Serie.</strong> Teorema: <span class="math inline">\sum
+a_n</span> converge ⇒ <span class="math inline">a_n \to 0</span>.
+Contronominale: <span class="math inline">a_n \not\to 0</span> ⇒ <span
+class="math inline">\sum a_n</span> <strong>non converge</strong>.
+Esempio: <span class="math inline">\sum \frac{n}{n+1}</span>, il termine
+tende a <span class="math inline">1</span>, quindi la serie non
+converge. (Attenzione: <span class="math inline">a_n \to 0</span>
+<strong>non basta</strong> per dire che converge.)</p></li>
+</ul>
+<hr />
+<h2 id="lemma-n-pari-iff-n2-pari">Lemma: <span
+class="math inline">n</span> pari <span class="math inline">\iff
+n^2</span> pari</h2>
+<p>Un esempio in cui il prof <strong>usa</strong> la contronominale
+(slide 17).</p>
+<p>Sia <span class="math inline">n</span> un numero intero. Allora</p>
+<p><span class="math display">n \text{ pari} \iff n^2 \text{
+pari}</span></p>
+<p>Il simbolo <span class="math inline">\iff</span> vuol dire “vale nei
+due sensi”. Bisogna dimostrare due frasi:</p>
+<ol type="1">
+<li><span class="math inline">n</span> pari <span
+class="math inline">\Rightarrow n^2</span> pari</li>
+<li><span class="math inline">n^2</span> pari <span
+class="math inline">\Rightarrow n</span> pari</li>
+</ol>
+<h3 id="definizioni-usate">Definizioni usate</h3>
+<ul>
+<li><span class="math inline">n</span> <strong>pari</strong>: esiste un
+intero <span class="math inline">k</span> tale che <span
+class="math inline">n = 2k</span></li>
+<li><span class="math inline">n</span> <strong>dispari</strong>: esiste
+un intero <span class="math inline">k</span> tale che <span
+class="math inline">n = 2k + 1</span> (“un pari più uno”)</li>
+</ul>
+<h3 id="frase-1-n-pari-rightarrow-n2-pari-dimostrazione-diretta">Frase
+1: <span class="math inline">n</span> pari <span
+class="math inline">\Rightarrow n^2</span> pari (dimostrazione
+diretta)</h3>
+<p>Con i numeri: <span class="math inline">4^2 = 16</span>, <span
+class="math inline">6^2 = 36</span>, sono pari.</p>
+<p>Con le lettere:</p>
+<p><span class="math display">n = 2k \;\Longrightarrow\; n^2 = (2k)^2 =
+4k^2 = 2\,(2k^2) \;\Longrightarrow\; n^2 \text{ pari}</span></p>
+<h3 id="frase-2-n2-pari-rightarrow-n-pari-con-la-contronominale">Frase
+2: <span class="math inline">n^2</span> pari <span
+class="math inline">\Rightarrow n</span> pari (con la
+contronominale)</h3>
+<p><strong>Perché non direttamente:</strong> da <span
+class="math inline">n^2 = 2k</span> dovrei fare <span
+class="math inline">n = \sqrt{2k}</span>, e da lì non si capisce
+niente.</p>
+<p><strong>Giro la frase</strong> (nego e scambio):</p>
+<p><span class="math display">n^2 \text{ pari} \Rightarrow n \text{
+pari} \quad\longrightarrow\quad n \text{ dispari} \Rightarrow n^2 \text{
+dispari}</span></p>
+<p>Questa va da <span class="math inline">n</span> a <span
+class="math inline">n^2</span>: basta elevare al quadrato, niente
+radici.</p>
+<p>Con i numeri: <span class="math inline">3^2 = 9</span>, <span
+class="math inline">5^2 = 25</span>, <span class="math inline">7^2 =
+49</span>, sono dispari.</p>
+<p>Con le lettere, usando <span class="math inline">(a+b)^2 = a^2 + 2ab
++ b^2</span>:</p>
+<p><span class="math display">n^2 = (2k+1)^2 = 4k^2 + 4k + 1 =
+\underbrace{2\,(2k^2 + 2k)}_{\text{pari}} + 1 \;\Longrightarrow\; n^2
+\text{ dispari}</span></p>
+<p>Controllo con <span class="math inline">n = 7</span> (<span
+class="math inline">k = 3</span>): <span class="math inline">4 \cdot 9 +
+4 \cdot 3 + 1 = 36 + 12 + 1 = 49</span> ✅</p>
+<h3 id="conclusione">Conclusione</h3>
+<ul>
+<li>Dimostrato: <span class="math inline">n</span> dispari <span
+class="math inline">\Rightarrow n^2</span> dispari</li>
+<li>Per la contronominale: <span class="math inline">n^2</span> pari
+<span class="math inline">\Rightarrow n</span> pari</li>
+<li>Con la frase 1: <span class="math inline">n</span> pari <span
+class="math inline">\iff n^2</span> pari ∎</li>
+</ul>
+<p><strong>Il succo:</strong> la contronominale si usa quando la strada
+diretta è in salita. Giro la frase e la percorro in discesa.</p>
+<hr />
+<h2
+id="predicati-quantificatori-insiemi-definiti-da-una-proprietà">Predicati,
+quantificatori, insiemi definiti da una proprietà</h2>
+<p>Riassunto di quello che si vedeva alla lavagna.</p>
+<h3 id="px-una-frase-con-una-variabile"><span
+class="math inline">P(x)</span>: una frase con una variabile</h3>
+<p><span class="math inline">P(x)</span> è una frase che contiene una
+lettera. Da sola non è né vera né falsa: <strong>dipende da cosa metto
+al posto della lettera</strong>.</p>
+<p>Esempio: <span class="math inline">P(n)</span> = “<span
+class="math inline">n</span> è pari”</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">n</span></th>
+<th style="text-align: center;"><span
+class="math inline">P(n)</span></th>
+<th style="text-align: center;">V/F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">“4 è pari”</td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">“7 è pari”</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">“10 è pari”</td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="i-simboli">I simboli</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Simbolo</th>
+<th>Si legge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\exists</span></td>
+<td><strong>esiste</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\forall</span></td>
+<td><strong>per ogni</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\in</span></td>
+<td>appartiene a</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">:</span></td>
+<td><strong>tale che</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\mathbb{N}</span></td>
+<td>numeri naturali <span class="math inline">\{0, 1, 2, 3,
+\dots\}</span> (per il prof Freddi <strong>lo 0 è incluso</strong>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="n-è-pari-scritto-in-matematica">“<span
+class="math inline">n</span> è pari” scritto in matematica</h3>
+<p><span class="math display">P(n): \quad \exists\, k \in \mathbb{N} : n
+= 2k</span></p>
+<p>“Esiste un naturale <span class="math inline">k</span> tale che <span
+class="math inline">n = 2k</span>.”</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">n</span></th>
+<th style="text-align: center;">Trovo <span class="math inline">k</span>
+con <span class="math inline">n = 2k</span>?</th>
+<th style="text-align: center;"><span
+class="math inline">P(n)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">sì, <span class="math inline">k =
+2</span></td>
+<td style="text-align: center;">V</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">no, <span class="math inline">7/2 =
+3{,}5</span></td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">sì, <span class="math inline">k =
+5</span></td>
+<td style="text-align: center;">V</td>
+</tr>
+</tbody>
+</table>
+<h3 id="un-insieme-costruito-con-una-frase">Un insieme costruito con una
+frase</h3>
+<p><span class="math display">\{\, n \in \mathbb{N} : \exists\, k \in
+\mathbb{N} : n = 2k \,\} = \{0, 2, 4, 6, \dots\}</span></p>
+<p>“L’insieme dei naturali <span class="math inline">n</span> per cui la
+frase è vera” = i numeri pari. Il primo “<span
+class="math inline">:</span>” separa <strong>chi</strong> (i naturali)
+dalla <strong>condizione</strong> che devono rispettare.</p>
+<h3 id="esempio-con-forall">Esempio con <span
+class="math inline">\forall</span></h3>
+<p>“<span class="math inline">\forall n \in \mathbb{N}</span>, <span
+class="math inline">2n</span> è pari” = “per ogni naturale <span
+class="math inline">n</span>, il suo doppio è pari” (vera).</p>
+<h3 id="a-cosa-serve">A cosa serve</h3>
+<p><span class="math inline">\forall</span> ed <span
+class="math inline">\exists</span> sono le parole su cui è scritta tutta
+l’Analisi. La definizione di limite (che chiedono all’orale) è:
+“<strong>per ogni</strong> <span class="math inline">\varepsilon &gt;
+0</span> <strong>esiste</strong> <span class="math inline">\delta &gt;
+0</span> tale che…”. Se so leggere questi simboli, so leggere le
+definizioni.</p>
+<h3 id="da-studiare-insieme-delle-parti">Da studiare: insieme delle
+parti</h3>
+<p>Alla lavagna: <span class="math inline">\mathcal{P}(A) = \{ B : B
+\subseteq A \}</span> = <strong>insieme delle parti</strong> di <span
+class="math inline">A</span> (o <strong>potenza</strong> di <span
+class="math inline">A</span>). Se <span class="math inline">A</span> ha
+<span class="math inline">n</span> elementi, <span
+class="math inline">\mathcal{P}(A)</span> ha <span
+class="math inline">2^n</span> elementi.</p>
+
+</main>
+<footer>Appunti personali di Pierluigi Ceccon · Analisi Matematica 1, Università di Udine.
+Le slide del docente non sono riprodotte qui.</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+document.querySelectorAll('.math').forEach(function (el) {
+  try {
+    katex.render(el.textContent, el, {displayMode: el.classList.contains('display'), throwOnError: false});
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

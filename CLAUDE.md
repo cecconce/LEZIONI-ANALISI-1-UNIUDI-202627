@@ -16,3 +16,8 @@ Repository privato con le lezioni universitarie di Analisi Matematica 1 (Univers
 - Non inventare esercizi né argomenti: solo quello che risulta dalle chat o dai documenti.
 - Non modificare le cartelle di lezioni già complete, salvo aggiunte reali (nuovi esercizi o dubbi risolti).
 - Aggiorna sempre l'elenco e la data in README.md.
+
+## Sito pubblico (repository cecconce/analisi-1-lezioni, GitHub Pages)
+- Si costruisce con `python3 scripts/build_sito.py`: crea `sito/` con `index.html`, `style.css` e una pagina per lezione in `sito/lezioni/NN.html`.
+- Lo script toglie da ogni LEZIONE.md le sezioni «Esercizi svolti» e «Dubbi aperti»: nel sito pubblico vanno solo appunti e riassunti.
+- Dopo la build copia il contenuto di `sito/` (index.html, style.css, lezioni/) nella radice del repository pubblico cecconce/analisi-1-lezioni, poi commit e push. Non copiare nient'altro del repository privato.

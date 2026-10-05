@@ -1,0 +1,56 @@
+:root {
+  --sfondo: #fbfaf7;
+  --testo: #1f2328;
+  --tenue: #5f6670;
+  --accento: #1d5c8f;
+  --riquadro: #f0eee8;
+  --bordo: #dcd8cf;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sfondo: #16181b;
+    --testo: #e6e6e3;
+    --tenue: #a3a8ae;
+    --accento: #7fb6e6;
+    --riquadro: #22252a;
+    --bordo: #353a40;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--sfondo);
+  color: var(--testo);
+  font: 17px/1.65 Georgia, "Times New Roman", serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 1.5rem 16px 3rem; }
+.testata {
+  border-bottom: 1px solid var(--bordo);
+  padding: .8rem 16px;
+  font: 600 15px/1.3 system-ui, sans-serif;
+}
+.testata a { color: var(--accento); text-decoration: none; }
+h1, h2, h3 { font-family: system-ui, sans-serif; line-height: 1.25; }
+h1 { font-size: 1.7rem; margin-top: .5rem; }
+h2 { font-size: 1.3rem; margin-top: 2.2rem; padding-bottom: .3rem; border-bottom: 1px solid var(--bordo); }
+h3 { font-size: 1.08rem; margin-top: 1.6rem; }
+a { color: var(--accento); }
+hr { border: 0; border-top: 1px solid var(--bordo); margin: 2rem 0; }
+table { border-collapse: collapse; margin: 1rem 0; display: block; overflow-x: auto; font-size: .95rem; }
+th, td { border: 1px solid var(--bordo); padding: .35rem .7rem; }
+th { background: var(--riquadro); }
+code { background: var(--riquadro); padding: .1rem .3rem; border-radius: 4px; font-size: .9em; }
+.katex-display { overflow-x: auto; overflow-y: hidden; padding: .3rem 0; }
+.intro { color: var(--tenue); }
+.elenco { list-style: none; padding: 0; }
+.elenco a {
+  display: flex; gap: 1rem; align-items: baseline;
+  padding: .9rem 1rem; margin-bottom: .6rem;
+  background: var(--riquadro); border: 1px solid var(--bordo); border-radius: 8px;
+  color: var(--testo); text-decoration: none;
+}
+.elenco a:hover { border-color: var(--accento); }
+.num { font: 700 1.1rem system-ui, sans-serif; color: var(--accento); }
+.arg { flex: 1; }
+.data { color: var(--tenue); font-size: .9rem; white-space: nowrap; }
+footer { max-width: 760px; margin: 0 auto; padding: 1rem 16px 2rem; color: var(--tenue); font-size: .85rem; border-top: 1px solid var(--bordo); }

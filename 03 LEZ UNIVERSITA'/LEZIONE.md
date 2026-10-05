@@ -266,8 +266,10 @@ L'insieme è quello dei multipli di 3: $\{0, 3, 6, 9, 12, \dots\}$.
 
 **Esito:** ✅ corretta (negati tutti e due i pezzi e scambiati). Verifica: $3^2 = 9 = 3 \cdot 3$, $6^2 = 36 = 3 \cdot 12$.
 
+**Dimostrazione con le lettere:** $n = 3k \Rightarrow n^2 = 9k^2$ (mio passaggio ✅). Passo che mi mancava: mettere in evidenza il 3, $n^2 = 3 \cdot (3k^2)$, cioè "3 per un intero", quindi multiplo di 3. ∎
+
 ---
 
 ## Dubbi aperti
 
-- Insieme delle parti $\mathcal{P}(A)$: visto alla lavagna, non ancora spiegato in chat.
+- Insieme delle parti $\wp(A)$ (slide 31–32): iniziato in chat, da finire l'esercizio con $A = \{1, 2, 3\}$.

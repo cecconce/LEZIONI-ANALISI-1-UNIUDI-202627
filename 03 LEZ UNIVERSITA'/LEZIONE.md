@@ -288,4 +288,10 @@ Sottoinsiemi di $\{1,2,3\}$: $\emptyset$; $\{1\},\{2\},\{3\}$; $\{1,2\},\{1,3\},
 
 ## Dubbi aperti
 
-- Nessuno: insieme delle parti chiarito (vedi Esercizio 5).
+- Insieme delle parti: chiarito (vedi Esercizio 5).
+- **Da studiare** – slide della lezione non ancora viste in chat (la lezione arriva fino alla slide 32):
+  - 18 Esercizi
+  - 19 Principi e regole di deduzione
+  - 20–23 Quantificatori, negazione con i quantificatori, esempio, osservazioni (visto solo il significato di $\forall$ ed $\exists$)
+  - 24–27 Rappresentazione degli insiemi, paradosso di Russell
+  - 28–30 Insieme vuoto, uguaglianza e inclusione (visto solo un accenno)

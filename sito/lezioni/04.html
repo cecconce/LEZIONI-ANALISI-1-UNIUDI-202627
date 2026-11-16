@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>04 LEZ UNIVERSITA&#x27; – Famiglie di insiemi, De Morgan, prodotto cartesiano, insiemi numerici</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="testata"><a href="../index.html">Analisi 1 · Lezioni 2026/27</a></header>
+<main>
+<h1
+id="lez-universita-famiglie-di-insiemi-de-morgan-prodotto-cartesiano-insiemi-numerici">04
+LEZ UNIVERSITA’ – Famiglie di insiemi, De Morgan, prodotto cartesiano,
+insiemi numerici</h1>
+<ul>
+<li><strong>Docente:</strong> prof. Lorenzo Freddi – Analisi Matematica
+1, Università di Udine, a.a. 2026/27</li>
+<li><strong>Data della lezione:</strong> da confermare (videolezione
+successiva alla lezione 03 del 29/09/2026)</li>
+<li><strong>Studiata in chat:</strong> dal 05/10/2026 al 18/10/2026</li>
+</ul>
+<h2 id="argomenti-trattati">Argomenti trattati</h2>
+<p>La lezione riparte dopo la slide 32 (insieme delle parti) e arriva
+alla <strong>slide 41</strong>.</p>
+<ol type="1">
+<li>Unione e intersezione di due insiemi (slide 33–34)</li>
+<li>Famiglie di insiemi: unione e intersezione di una famiglia (slide
+35)</li>
+<li>Proprietà associative e distributive (slide 36)</li>
+<li>Complementare e differenza di insiemi (slide 37)</li>
+<li>Leggi di De Morgan, per due insiemi e per una famiglia (slide
+38)</li>
+<li>Coppie ordinate e prodotto cartesiano (slide 39)</li>
+<li>Insiemi numerici <span class="math inline">\mathbb{N}, \mathbb{Z},
+\mathbb{Q}, \mathbb{R}</span> (slide 41)</li>
+</ol>
+<h2 id="materiali-su-drive-solo-link">Materiali su Drive (solo
+link)</h2>
+<ul>
+<li><a
+href="https://drive.google.com/file/d/1K72wRUI-xyKGGE2JaSwpFnFshwy3CFT6/view">2026_pres_01_logica_e_insiemi.pdf</a>
+– slide del prof. Freddi (questa lezione: slide 33–41)</li>
+</ul>
+<hr />
+<h2 id="unione-e-intersezione-di-due-insiemi">1. Unione e intersezione
+di due insiemi</h2>
+<p><strong>L’idea.</strong> In una classe: <span
+class="math inline">A</span> = chi ha consegnato matematica, <span
+class="math inline">B</span> = chi ha consegnato fisica.</p>
+<ul>
+<li><strong>Unione</strong> <span class="math inline">A \cup B</span>:
+chi ha consegnato <strong>almeno uno</strong> dei due compiti.</li>
+<li><strong>Intersezione</strong> <span class="math inline">A \cap
+B</span>: chi ha consegnato <strong>tutti e due</strong>.</li>
+</ul>
+<p><strong>Con i numeri.</strong> <span class="math inline">A =
+\{1,2,3,4\}</span>, <span class="math inline">B = \{3,4,5\}</span></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">elemento</th>
+<th style="text-align: center;">in A?</th>
+<th style="text-align: center;">in B?</th>
+<th style="text-align: center;">in <span class="math inline">A \cup
+B</span>?</th>
+<th style="text-align: center;">in <span class="math inline">A \cap
+B</span>?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">A \cup B = \{1,2,3,4,5\}, \qquad A \cap B
+= \{3,4\}</span></p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">A \cup B = \{\, x : x \in A \lor x \in B
+\,\} \qquad A \cap B = \{\, x : x \in A \land x \in B \,\}</span></p>
+<p><span class="math inline">\lor</span> = “oppure” (basta una), <span
+class="math inline">\land</span> = “e” (servono tutte e due).</p>
+<p><strong>A cosa serve.</strong> Il dominio di una funzione è
+l’<strong>intersezione</strong> delle condizioni (radice ≥ 0 <em>e</em>
+denominatore ≠ 0). La soluzione di una disequazione spezzata in casi è
+un’<strong>unione</strong> di intervalli.</p>
+<hr />
+<h2 id="famiglie-di-insiemi-slide-35">2. Famiglie di insiemi (slide
+35)</h2>
+<p><strong>L’idea.</strong> Una scuola ha tre classi; ogni classe è un
+insieme di studenti. L’elenco delle classi è un <strong>insieme di
+insiemi</strong>: una <strong>famiglia di insiemi</strong>. I “nomi”
+delle classi (1, 2, 3) formano l’<strong>insieme degli indici</strong>
+<span class="math inline">I</span>.</p>
+<p><span class="math display">\mathscr{F} = \{\, A_i \in \wp(U) : i \in
+I \,\}</span></p>
+<ul>
+<li>se <span class="math inline">I = \{1,2,\dots,n\}</span> allora <span
+class="math inline">\mathscr{F} = \{A_1, A_2, \dots, A_n\}</span></li>
+<li>se <span class="math inline">I = \{1,2,\dots,n,\dots\}</span> allora
+<span class="math inline">\mathscr{F} = \{A_1, A_2, \dots, A_n,
+\dots\}</span></li>
+</ul>
+<p><strong>Con i numeri.</strong> <span class="math inline">I =
+\{1,2,3\}</span>, <span class="math inline">A_1 = \{0,1\}</span>, <span
+class="math inline">A_2 = \{1,2\}</span>, <span class="math inline">A_3
+= \{1,3\}</span></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">elemento</th>
+<th style="text-align: center;">in <span
+class="math inline">A_1</span>?</th>
+<th style="text-align: center;">in <span
+class="math inline">A_2</span>?</th>
+<th style="text-align: center;">in <span
+class="math inline">A_3</span>?</th>
+<th style="text-align: center;">almeno uno?</th>
+<th style="text-align: center;">tutti?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;"><strong>sì</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\bigcup_{i\in I} A_i = \{0,1,2,3\}, \qquad
+\bigcap_{i\in I} A_i = \{1\}</span></p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">\bigcup_{i\in I} A_i := \{\, x \in U :
+\exists\, i \in I : x \in A_i \,\} \qquad \text{(almeno uno)}</span></p>
+<p><span class="math display">\bigcap_{i\in I} A_i := \{\, x \in U : x
+\in A_i \ \ \forall\, i \in I \,\} \qquad \text{(tutti)}</span></p>
+<p><strong>Regola da ricordare:</strong> unione ↔︎ <span
+class="math inline">\exists</span>, intersezione ↔︎ <span
+class="math inline">\forall</span>.</p>
+<p><strong>A cosa serve.</strong> All’orale si chiedono le due
+definizioni con <span class="math inline">\exists</span> e <span
+class="math inline">\forall</span>. Con <span class="math inline">I =
+\mathbb{N}</span> si hanno famiglie infinite (servirà con successioni e
+limiti).</p>
+<hr />
+<h2 id="proprietà-associative-e-distributive-slide-36">3. Proprietà
+associative e distributive (slide 36)</h2>
+<p>La slide le dà come esercizio da dimostrare:</p>
+<ol type="1">
+<li><span class="math inline">A \cap (B \cap C) = (A \cap B) \cap
+C</span></li>
+<li><span class="math inline">A \cup (B \cup C) = (A \cup B) \cup
+C</span></li>
+<li><span class="math inline">A \cup (B \cap C) = (A \cup B) \cap (A
+\cup C)</span></li>
+<li><span class="math inline">A \cap (B \cup C) = (A \cap B) \cup (A
+\cap C)</span></li>
+</ol>
+<p><strong>L’idea.</strong> Come con i numeri: <span
+class="math inline">(2+3)+4 = 2+(3+4)</span> e <span
+class="math inline">2 \cdot (3+4) = 2\cdot 3 + 2\cdot 4</span>. Con gli
+insiemi <span class="math inline">\cap</span> fa la parte del “per” e
+<span class="math inline">\cup</span> del “più”. Novità: con gli insiemi
+la distributiva vale <strong>nei due sensi</strong> (la 3 e la 4).</p>
+<p><strong>Con i numeri (distributiva 4).</strong> <span
+class="math inline">A = \{1,2\}</span>, <span class="math inline">B =
+\{2,3\}</span>, <span class="math inline">C = \{3,4\}</span></p>
+<ul>
+<li>Sinistra: <span class="math inline">B \cup C = \{2,3,4\}</span>, poi
+<span class="math inline">A \cap \{2,3,4\} = \{2\}</span></li>
+<li>Destra: <span class="math inline">A \cap B = \{2\}</span>, <span
+class="math inline">A \cap C = \emptyset</span>, poi <span
+class="math inline">\{2\} \cup \emptyset = \{2\}</span></li>
+<li><span class="math inline">\{2\} = \{2\}</span> ✓</li>
+</ul>
+<p><strong>Dimostrazione (metodo da usare all’orale):</strong> si
+traduce in logica e si usa la distributiva di “e/o”.</p>
+<p><span class="math display">
+\begin{aligned}
+x \in A \cap (B \cup C)
+&amp;\iff x \in A \land (x \in B \lor x \in C) \\
+&amp;\iff (x \in A \land x \in B) \lor (x \in A \land x \in C) \\
+&amp;\iff x \in (A \cap B) \lor x \in (A \cap C) \\
+&amp;\iff x \in (A \cap B) \cup (A \cap C)
+\end{aligned}
+</span></p>
+<p>Le altre tre si dimostrano con lo stesso schema.</p>
+<hr />
+<h2 id="complementare-e-differenza-slide-37">4. Complementare e
+differenza (slide 37)</h2>
+<p><strong>L’idea: la scatola.</strong> Una scatola con le palline <span
+class="math inline">1,2,3,4,5</span> è <span
+class="math inline">U</span> (il “tutto”). Le rosse <span
+class="math inline">1,2,3</span> sono <span
+class="math inline">A</span>.</p>
+<ul>
+<li><strong>Complementare</strong> <span class="math inline">A^C</span>:
+“quali palline della scatola <strong>non</strong> sono rosse?” → <span
+class="math inline">\{4,5\}</span>. Si capovolge la colonna sì/no.</li>
+<li><strong>Differenza</strong> <span class="math inline">A \setminus
+B</span> (“A meno B”): le palline con la stella sono <span
+class="math inline">B = \{3,4\}</span>. “Quali palline rosse
+<strong>non</strong> hanno la stella?” → parto dalle rosse e tolgo la 3
+→ <span class="math inline">\{1,2\}</span>.</li>
+</ul>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">pallina</th>
+<th style="text-align: center;">rossa (in A)?</th>
+<th style="text-align: center;">stella (in B)?</th>
+<th style="text-align: center;">in <span
+class="math inline">A^C</span>?</th>
+<th style="text-align: center;">in <span class="math inline">A \setminus
+B</span>?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;"><strong>sì</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;"><strong>sì</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;"><strong>sì</strong></td>
+<td style="text-align: center;">no</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;"><strong>sì</strong></td>
+<td style="text-align: center;">no</td>
+</tr>
+</tbody>
+</table>
+<p>Attenzione: la differenza non è simmetrica, <span
+class="math inline">B \setminus A = \{4\} \neq A \setminus B</span>.</p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">A^C := \mathcal{C}(A) := \{\, x \in U : x
+\notin A \,\}</span></p>
+<p><span class="math display">A \setminus B := \{\, x \in U : (x \in A)
+\land (x \notin B) \,\}</span></p>
+<p><strong>Collegamento:</strong> il complementare è “tutta la scatola
+meno A”:</p>
+<p><span class="math display">A^C = U \setminus A</span></p>
+<p><strong>A cosa serve.</strong> I domini si scrivono come differenze:
+<span class="math inline">\mathbb{R} \setminus \{0\}</span> per <span
+class="math inline">f(x) = \frac{1}{x}</span>. Il complementare serve
+per De Morgan.</p>
+<hr />
+<h2 id="leggi-di-de-morgan-slide-38">5. Leggi di De Morgan (slide
+38)</h2>
+<p><strong>L’idea.</strong> - <em>“Non voglio né tè né caffè”</em> = non
+voglio il tè <strong>e</strong> non voglio il caffè. Il “non” entra e
+<strong>“o” diventa “e”</strong>. - <em>“Non è vero che ho sia fame sia
+sete”</em> = non ho fame <strong>oppure</strong> non ho sete. Il “non”
+entra e <strong>“e” diventa “o”</strong>.</p>
+<p><strong>Con la scatola.</strong> <span class="math inline">U =
+\{1,2,3,4,5\}</span>, <span class="math inline">A = \{1,2,3\}</span>,
+<span class="math inline">B = \{3,4\}</span>, quindi <span
+class="math inline">A^C = \{4,5\}</span>, <span class="math inline">B^C
+= \{1,2,5\}</span>.</p>
+<ul>
+<li>1ª legge: <span class="math inline">(A \cup B)^C = \{1,2,3,4\}^C =
+\{5\}</span> e <span class="math inline">A^C \cap B^C = \{5\}</span>
+✓</li>
+<li>2ª legge: <span class="math inline">(A \cap B)^C = \{3\}^C =
+\{1,2,4,5\}</span> e <span class="math inline">A^C \cup B^C =
+\{1,2,4,5\}</span> ✓</li>
+</ul>
+<p><strong>I simboli del prof (per due insiemi).</strong></p>
+<p><span class="math display">(A \cup B)^C = A^C \cap B^C \qquad (A \cap
+B)^C = A^C \cup B^C</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>Legge</th>
+<th>prima</th>
+<th>dopo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1ª</td>
+<td><span class="math inline">(A \cup B)^C</span></td>
+<td><span class="math inline">A^C \cap B^C</span></td>
+</tr>
+<tr class="even">
+<td>2ª</td>
+<td><span class="math inline">(A \cap B)^C</span></td>
+<td><span class="math inline">A^C \cup B^C</span></td>
+</tr>
+</tbody>
+</table>
+<p>Regola: il complementare entra nella parentesi e <strong>∪ e ∩ si
+scambiano</strong>.</p>
+<p><strong>Per una famiglia</strong> <span
+class="math inline">\mathscr{F} = \{A_i \in \wp(U) : i \in I\}</span>
+(sulla slide, non svolta in chat):</p>
+<p><span class="math display">\Big(\bigcup_{i\in I} A_i\Big)^C =
+\bigcap_{i\in I} A_i^C \qquad \Big(\bigcap_{i\in I} A_i\Big)^C =
+\bigcup_{i\in I} A_i^C</span></p>
+<p><strong>A cosa serve.</strong> All’orale la slide la dà come
+esercizio da dimostrare (stesso metodo della distributiva). Negli
+esercizi serve per negare frasi: “<span class="math inline">x &lt;
+1</span> oppure <span class="math inline">x &gt; 3</span>” diventa
+“<span class="math inline">x \geq 1</span> e <span class="math inline">x
+\leq 3</span>”.</p>
+<hr />
+<h2 id="coppie-ordinate-e-prodotto-cartesiano-slide-39">6. Coppie
+ordinate e prodotto cartesiano (slide 39)</h2>
+<p><strong>L’idea.</strong> Al cinema “fila 3, posto 5” non è “fila 5,
+posto 3”: nella <strong>coppia ordinata</strong> conta l’ordine. <span
+class="math inline">(3,5) \neq (5,3)</span>, mentre con gli insiemi
+<span class="math inline">\{3,5\} = \{5,3\}</span>.</p>
+<p>Il <strong>prodotto cartesiano</strong> <span class="math inline">A
+\times B</span> è l’elenco di <strong>tutte</strong> le coppie: primo
+elemento da <span class="math inline">A</span>, secondo da <span
+class="math inline">B</span> (come i pranzi possibili di un menù: 2
+primi × 3 secondi = 6 pranzi).</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">A =
+\{1,2\}</span>, <span class="math inline">B = \{3,4,5\}</span></p>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th><strong>3</strong></th>
+<th><strong>4</strong></th>
+<th><strong>5</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>(1,3)</td>
+<td>(1,4)</td>
+<td>(1,5)</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>(2,3)</td>
+<td>(2,4)</td>
+<td>(2,5)</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">2 \cdot 3 = 6</span> coppie: i numeri di
+elementi si moltiplicano, da qui il nome “prodotto”. Ogni coppia è un
+punto del piano (primo numero in orizzontale, secondo in verticale).</p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">(x,y) = (x&#39;,y&#39;) \iff x = x&#39;
+\land y = y&#39;</span></p>
+<p><span class="math display">A \times B := \{\, (x,y) : x \in A \land y
+\in B \,\}</span></p>
+<p><strong>A cosa serve.</strong> <span class="math inline">\mathbb{R}
+\times \mathbb{R}</span> è il piano cartesiano. Il grafico di una
+funzione è un insieme di coppie <span class="math inline">(x,
+f(x))</span>; le funzioni di più variabili <span
+class="math inline">f(x,y)</span> sono definite su <span
+class="math inline">\mathbb{R} \times \mathbb{R}</span>.</p>
+<hr />
+<h2 id="insiemi-numerici-slide-41">7. Insiemi numerici (slide 41)</h2>
+<p><strong>L’idea: matrioske.</strong> Ogni scatola nasce perché nella
+precedente manca qualcosa.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Insieme</th>
+<th>Nella vita</th>
+<th>Cosa aggiunge</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\mathbb{N}</span> naturali</td>
+<td>contare oggetti</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\mathbb{Z}</span> interi</td>
+<td>temperature sotto zero, conto in rosso</td>
+<td>i negativi</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\mathbb{Q}</span> razionali</td>
+<td>mezza pizza, un quarto d’ora</td>
+<td>le frazioni</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\mathbb{R}</span> reali</td>
+<td>diagonale di un quadrato di lato 1</td>
+<td>i numeri che non sono frazioni (<span class="math inline">\sqrt{2},
+\pi</span>)</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">numero</th>
+<th style="text-align: center;"><span
+class="math inline">\mathbb{N}</span></th>
+<th style="text-align: center;"><span
+class="math inline">\mathbb{Z}</span></th>
+<th style="text-align: center;"><span
+class="math inline">\mathbb{Q}</span></th>
+<th style="text-align: center;"><span
+class="math inline">\mathbb{R}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">-2</span></td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span
+class="math inline">\frac{1}{2}</span></td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+<td style="text-align: center;">sì</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span
+class="math inline">\sqrt{2}</span></td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">no</td>
+<td style="text-align: center;">sì</td>
+</tr>
+</tbody>
+</table>
+<p>Chi sta in una scatola sta anche in tutte quelle più grandi: <span
+class="math inline">\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q}
+\subseteq \mathbb{R}</span>.</p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">\mathbb{N} := \{0,1,2,3,4,\dots\} \qquad
+\mathbb{Z} := \{0,1,-1,2,-2,3,-3,\dots\}</span></p>
+<p><span class="math display">\mathbb{Q} := \left\{ \frac{p}{q} : p \in
+\mathbb{Z},\ q \in \mathbb{Z} \setminus \{0\} \right\} \qquad \mathbb{R}
+:= \text{insieme dei numeri reali}</span></p>
+<p>Per il prof <strong>lo 0 è in <span
+class="math inline">\mathbb{N}</span></strong>. In <span
+class="math inline">\mathbb{Q}</span> torna la differenza: <span
+class="math inline">q \in \mathbb{Z} \setminus \{0\}</span>, perché non
+si divide per 0.</p>
+<p><strong>A cosa serve.</strong> Le funzioni d’esame vivono in <span
+class="math inline">\mathbb{R}</span>; i domini si scrivono con questi
+simboli.</p>
+
+</main>
+<footer>Appunti personali di Pierluigi Ceccon · Analisi Matematica 1, Università di Udine.
+Le slide del docente non sono riprodotte qui.</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+document.querySelectorAll('.math').forEach(function (el) {
+  try {
+    katex.render(el.textContent, el, {displayMode: el.classList.contains('display'), throwOnError: false});
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

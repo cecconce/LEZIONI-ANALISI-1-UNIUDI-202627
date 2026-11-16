@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>08 LEZ UNIVERSITA&#x27; – Grafico dell&#x27;inversa, funzioni monotone, valore assoluto</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="testata"><a href="../index.html">Analisi 1 · Lezioni 2026/27</a></header>
+<main>
+<h1
+id="lez-universita-grafico-dellinversa-funzioni-monotone-valore-assoluto">08
+LEZ UNIVERSITA’ – Grafico dell’inversa, funzioni monotone, valore
+assoluto</h1>
+<ul>
+<li><strong>Docente:</strong> prof. Lorenzo Freddi – Analisi Matematica
+1, Università di Udine, a.a. 2026/27</li>
+<li><strong>Data della lezione:</strong> 07/10/2026, videolezioni ore
+8:33 (1 h 5 min) e ore 9:44 (37 min)</li>
+<li><strong>Studiata in chat:</strong> 12/11/2026, 14/11/2026,
+15/11/2026</li>
+</ul>
+<h2 id="argomenti-trattati">Argomenti trattati</h2>
+<p>La lezione riprende le dimostrazioni sull’inversa e arriva fino agli
+esercizi sul valore assoluto (<strong>pres_02, slide 13–14 e
+16–24</strong>).</p>
+<ol type="1">
+<li>Ripresa delle dimostrazioni: unicità dell’inversa e invertibile
+<span class="math inline">\iff</span> biiettiva; esercizio <span
+class="math inline">f^{-1}(C) = \{f^{-1}(y) : y \in C\}</span> (slide
+13–14)</li>
+<li>Grafico della funzione inversa (slide 16–17)</li>
+<li>Funzioni monotone (slide 18)</li>
+<li>Monotonia della funzione inversa (slide 19)</li>
+<li>Funzioni monotone e disequazioni (slide 20)</li>
+<li>La funzione valore assoluto (slide 21)</li>
+<li>Proprietà del valore assoluto, dalla 1 alla 8 (slide 22)</li>
+<li>Disuguaglianza triangolare, dimostrazione passando ai quadrati
+(slide 23)</li>
+<li>Esercizi sul valore assoluto (slide 24)</li>
+</ol>
+<h2 id="materiali-su-drive-solo-link">Materiali su Drive (solo
+link)</h2>
+<ul>
+<li><a
+href="https://drive.google.com/file/d/10cclpI1x6npMY6ImQ7oINCC6LCPRbUuO/view">2026_pres_02_funzioni.pdf</a>
+– slide del prof. Freddi (questa lezione: slide 13–14 e 16–24)</li>
+</ul>
+<hr />
+<h2 id="ripresa-delle-dimostrazioni-slide-1314">1. Ripresa delle
+dimostrazioni (slide 13–14)</h2>
+<p><strong>L’idea.</strong> Se <span class="math inline">f</span> è
+“metti il cappotto”, l’inversa è “togli il cappotto”: c’è un solo modo
+di disfare <span class="math inline">f</span>. Per poterla disfare
+servono le due regole del guardaroba: nessun numero dato a due cappotti,
+nessun numero rimasto senza cappotto.</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">f(x) = 2x +
+3</span>, supponendo due inverse <span class="math inline">g_1</span>,
+<span class="math inline">g_2</span> e provandole su <span
+class="math inline">y = 5</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Passo</th>
+<th>Cosa scrivo</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><span class="math inline">g_1(5) = a</span></td>
+<td>è solo un nome</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">f(a) = f(g_1(5)) = 5</span></td>
+<td><span class="math inline">f \circ g_1 = \mathrm{id}_B</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">g_2(f(a)) = a</span></td>
+<td><span class="math inline">g_2 \circ f = \mathrm{id}_A</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><span class="math inline">g_2(5) = a</span></td>
+<td>sostituisco <span class="math inline">f(a) = 5</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>I simboli del prof.</strong> Unicità, con ogni “=”
+giustificato:</p>
+<p><span class="math display">g_1 \overset{(1)}{=} \mathrm{id}_A \circ
+g_1 \overset{(2)}{=} (g_2 \circ f) \circ g_1 \overset{(3)}{=} g_2 \circ
+(f \circ g_1) \overset{(4)}{=} g_2 \circ \mathrm{id}_B \overset{(5)}{=}
+g_2</span></p>
+<table>
+<thead>
+<tr class="header">
+<th>=</th>
+<th>Giustificazione</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>(1)</td>
+<td><span class="math inline">\mathrm{id}_A</span> lascia <span
+class="math inline">g_1(y)</span> com’è</td>
+</tr>
+<tr class="even">
+<td>(2)</td>
+<td><span class="math inline">g_2</span> è inversa: <span
+class="math inline">g_2 \circ f = \mathrm{id}_A</span></td>
+</tr>
+<tr class="odd">
+<td>(3)</td>
+<td>la composizione è associativa</td>
+</tr>
+<tr class="even">
+<td>(4)</td>
+<td><span class="math inline">g_1</span> è inversa: <span
+class="math inline">f \circ g_1 = \mathrm{id}_B</span></td>
+</tr>
+<tr class="odd">
+<td>(5)</td>
+<td><span class="math inline">\mathrm{id}_B</span> lascia <span
+class="math inline">y</span> com’è</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Invertibile <span class="math inline">\iff</span>
+biiettiva.</strong> - (<span class="math inline">\Rightarrow</span>)
+Iniettiva: <span class="math inline">f(x_1) = f(x_2) \Rightarrow
+f^{-1}(f(x_1)) = f^{-1}(f(x_2)) \Rightarrow x_1 = x_2</span>.
+Suriettiva: dato <span class="math inline">y</span>, prendo <span
+class="math inline">x = f^{-1}(y)</span> e <span
+class="math inline">f(x) = y</span> (con i numeri: <span
+class="math inline">f^{-1}(9) = 3</span>, <span class="math inline">f(3)
+= 9</span>). - (<span class="math inline">\Leftarrow</span>) Per ogni
+<span class="math inline">y</span> esiste un <span
+class="math inline">x</span> con <span class="math inline">f(x) =
+y</span> (suriettiva) ed è uno solo (iniettiva): pongo <span
+class="math inline">g(y) = x</span>.</p>
+<p><strong>Esercizio per casa, <span class="math inline">f^{-1}(C) =
+\{f^{-1}(y) : y \in C\}</span>.</strong> A sinistra la controimmagine
+(gli <span class="math inline">x</span> che <span
+class="math inline">f</span> manda dentro <span
+class="math inline">C</span>), a destra ogni <span class="math inline">y
+\in C</span> riportato indietro con l’inversa. Con <span
+class="math inline">f(x) = 2x + 3</span> su <span
+class="math inline">\{1, 2, 3\}</span> e <span class="math inline">C =
+\{5, 9\}</span>: sinistra <span class="math inline">f(1) = 5</span> sì,
+<span class="math inline">f(2) = 7</span> no, <span
+class="math inline">f(3) = 9</span> sì <span class="math inline">\to
+\{1, 3\}</span>; destra <span class="math inline">f^{-1}(5) = 1</span>,
+<span class="math inline">f^{-1}(9) = 3 \to \{1, 3\}</span>.</p>
+<p><strong>A cosa serve.</strong> Dà senso al simbolo unico <span
+class="math inline">f^{-1}</span> (<span
+class="math inline">\sqrt{x}</span>, <span class="math inline">\ln
+x</span>, <span class="math inline">\arcsin x</span>) e dà il test
+pratico per sapere se l’inversa esiste. La tecnica “suppongo che siano
+due e mostro che coincidono” torna nell’unicità del limite.</p>
+<hr />
+<h2 id="grafico-della-funzione-inversa-slide-1617">2. Grafico della
+funzione inversa (slide 16–17)</h2>
+<p><strong>L’idea.</strong> Leggere la tabella al contrario: sul grafico
+ogni punto scambia le sue due coordinate.</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">f(x) = 2x +
+3</span>, <span class="math inline">f^{-1}(y) = \dfrac{y -
+3}{2}</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Grafico di <span
+class="math inline">f</span></th>
+<th style="text-align: center;">Grafico di <span
+class="math inline">f^{-1}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">(0,
+3)</span></td>
+<td style="text-align: center;"><span class="math inline">(3,
+0)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">(1,
+5)</span></td>
+<td style="text-align: center;"><span class="math inline">(5,
+1)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">(2,
+7)</span></td>
+<td style="text-align: center;"><span class="math inline">(7,
+2)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disegno.</strong></p>
+<pre><code>        y=x  (specchio)
+   f   /
+   |  /   f⁻¹
+   | /  ___/
+   |/__/
+───/──────────
+  /</code></pre>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">(a, b) \in \operatorname{graf}(f) \iff b =
+f(a) \iff a = f^{-1}(b) \iff (b, a) \in
+\operatorname{graf}(f^{-1})</span></p>
+<p>Equivale a scambiare gli assi oppure a riflettere il grafico rispetto
+alla bisettrice del primo e terzo quadrante, <span class="math inline">y
+= x</span>.</p>
+<p><strong>A cosa serve.</strong> Disegnare <span
+class="math inline">\sqrt{x}</span> da <span
+class="math inline">x^2</span>, <span class="math inline">\ln x</span>
+da <span class="math inline">e^x</span>, <span
+class="math inline">\arcsin x</span> da <span class="math inline">\sin
+x</span> senza fare conti: serve nello studio di funzione.</p>
+<hr />
+<h2 id="funzioni-monotone-slide-18">3. Funzioni monotone (slide 18)</h2>
+<p><strong>L’idea.</strong> Una scala che sale sempre è crescente; se ha
+pianerottoli è crescente solo “debolmente”. Lo stesso in discesa.</p>
+<p><strong>Con i numeri.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th style="text-align: center;"><span
+class="math inline">x=1</span></th>
+<th style="text-align: center;"><span
+class="math inline">x=2</span></th>
+<th style="text-align: center;"><span
+class="math inline">x=3</span></th>
+<th style="text-align: center;"><span
+class="math inline">x=4</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>strettamente crescente</td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">4</span></td>
+<td style="text-align: center;"><span class="math inline">6</span></td>
+<td style="text-align: center;"><span class="math inline">8</span></td>
+</tr>
+<tr class="even">
+<td>strettamente decrescente</td>
+<td style="text-align: center;"><span class="math inline">12</span></td>
+<td style="text-align: center;"><span class="math inline">11</span></td>
+<td style="text-align: center;"><span class="math inline">10</span></td>
+<td style="text-align: center;"><span class="math inline">9</span></td>
+</tr>
+<tr class="odd">
+<td>debolmente crescente (non decrescente)</td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+</tr>
+<tr class="even">
+<td>debolmente decrescente (non crescente)</td>
+<td style="text-align: center;"><span class="math inline">7</span></td>
+<td style="text-align: center;"><span class="math inline">7</span></td>
+<td style="text-align: center;"><span class="math inline">5</span></td>
+<td style="text-align: center;"><span class="math inline">5</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>I simboli del prof.</strong> Per <span
+class="math inline">x_1 &lt; x_2</span> nel dominio:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Tipo</th>
+<th>Condizione</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>strettamente crescente</td>
+<td><span class="math inline">f(x_1) &lt; f(x_2)</span></td>
+</tr>
+<tr class="even">
+<td>strettamente decrescente</td>
+<td><span class="math inline">f(x_1) &gt; f(x_2)</span></td>
+</tr>
+<tr class="odd">
+<td>debolmente crescente</td>
+<td><span class="math inline">f(x_1) \le f(x_2)</span></td>
+</tr>
+<tr class="even">
+<td>debolmente decrescente</td>
+<td><span class="math inline">f(x_1) \ge f(x_2)</span></td>
+</tr>
+</tbody>
+</table>
+<p>La differenza tra “stretta” e “debole” è solo <span
+class="math inline">&lt;</span> contro <span
+class="math inline">\le</span>.</p>
+<p><strong>A cosa serve.</strong> Risolvere disequazioni (punto 5);
+nello studio di funzione il segno della derivata dirà dove <span
+class="math inline">f</span> cresce e dove decresce.</p>
+<hr />
+<h2 id="monotonia-della-funzione-inversa-slide-19">4. Monotonia della
+funzione inversa (slide 19)</h2>
+<p><strong>L’idea.</strong> L’inversa di una funzione che sale, sale
+anche lei; quella di una che scende, scende.</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">f(x) = 2x +
+3</span>: <span class="math inline">f^{-1}(5) = 1</span>, <span
+class="math inline">f^{-1}(7) = 2</span>, <span
+class="math inline">f^{-1}(9) = 3</span> → crescente. <span
+class="math inline">f(x) = 10 - x</span>: <span
+class="math inline">f^{-1}(7) = 3</span>, <span
+class="math inline">f^{-1}(9) = 1</span> → decrescente.</p>
+<p><strong>I simboli del prof.</strong> Se <span
+class="math inline">f</span> è crescente (decrescente), anche <span
+class="math inline">f^{-1}</span> lo è. Dimostrazione (caso crescente),
+per assurdo: siano <span class="math inline">y_1 &lt; y_2</span>, <span
+class="math inline">x_1 = f^{-1}(y_1)</span>, <span
+class="math inline">x_2 = f^{-1}(y_2)</span>.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Passo</th>
+<th>Cosa scrivo</th>
+<th>Perché</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>suppongo <span class="math inline">x_1 \ge x_2</span></td>
+<td>per assurdo</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">f(x_1) \ge f(x_2)</span></td>
+<td><span class="math inline">f</span> crescente</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">y_1 \ge y_2</span></td>
+<td><span class="math inline">f(x_i) = y_i</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>impossibile</td>
+<td><span class="math inline">y_1 &lt; y_2</span></td>
+</tr>
+</tbody>
+</table>
+<p>Quindi <span class="math inline">f^{-1}(y_1) &lt;
+f^{-1}(y_2)</span>.</p>
+<p><strong>A cosa serve.</strong> Conoscere subito l’andamento di <span
+class="math inline">\sqrt{x}</span>, <span class="math inline">\ln
+x</span> (crescenti) e <span class="math inline">\arccos x</span>
+(decrescente).</p>
+<hr />
+<h2 id="funzioni-monotone-e-disequazioni-slide-20">5. Funzioni monotone
+e disequazioni (slide 20)</h2>
+<p><strong>L’idea.</strong> In una disequazione si “toglie” <span
+class="math inline">f</span> dai due lati: se <span
+class="math inline">f</span> sale il verso resta, se scende il verso si
+gira.</p>
+<p><strong>Con i numeri.</strong></p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>Disequazione</th>
+<th>Confine</th>
+<th>Soluzione</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>crescente <span class="math inline">2x + 3</span></td>
+<td><span class="math inline">2x + 3 \le 9</span></td>
+<td><span class="math inline">f(3) = 9</span></td>
+<td><span class="math inline">x \le 3</span> (verso resta)</td>
+</tr>
+<tr class="even">
+<td>decrescente <span class="math inline">10 - x</span></td>
+<td><span class="math inline">10 - x \le 7</span></td>
+<td><span class="math inline">f(3) = 7</span></td>
+<td><span class="math inline">x \ge 3</span> (verso girato)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>I simboli del prof.</strong> - <span
+class="math inline">f</span> suriettiva e strettamente monotona <span
+class="math inline">\Rightarrow</span> <span
+class="math inline">f</span> invertibile. - <span
+class="math inline">f(x) \le f(y) \iff x \le y</span> se <span
+class="math inline">f</span> è crescente; <span class="math inline">f(x)
+\le f(y) \iff x \ge y</span> se <span class="math inline">f</span> è
+decrescente.</p>
+<p><strong>A cosa serve.</strong> Spiega perché moltiplicando per un
+negativo il verso si gira (<span class="math inline">x \mapsto -x</span>
+è decrescente); si “tolgono” <span class="math inline">\sqrt{\ }</span>,
+<span class="math inline">e^x</span>, <span
+class="math inline">\ln</span> perché crescenti (pres_03).</p>
+<hr />
+<h2 id="la-funzione-valore-assoluto-slide-21">6. La funzione valore
+assoluto (slide 21)</h2>
+<p><strong>L’idea.</strong> È la distanza da zero, senza il verso: 3 km
+a est o 3 km a ovest sono sempre 3 km da casa.</p>
+<p><strong>Con i numeri.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">x</span></th>
+<th style="text-align: center;"><span class="math inline">-3</span></th>
+<th style="text-align: center;"><span class="math inline">-2</span></th>
+<th style="text-align: center;"><span class="math inline">-1</span></th>
+<th style="text-align: center;"><span class="math inline">0</span></th>
+<th style="text-align: center;"><span class="math inline">1</span></th>
+<th style="text-align: center;"><span class="math inline">2</span></th>
+<th style="text-align: center;"><span class="math inline">3</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\lvert x\rvert</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disegno.</strong> Una “V” con la punta in <span
+class="math inline">(0, 0)</span>: a destra <span class="math inline">y
+= x</span>, a sinistra <span class="math inline">y = -x</span>.</p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">|x| = \begin{cases} x &amp; \text{se } x
+\ge 0 \\ -x &amp; \text{se } x &lt; 0 \end{cases}</span></p>
+<p>Attenzione alla seconda riga: <span class="math inline">|-3| = -(-3)
+= +3</span>. Il modulo non è monotono su <span
+class="math inline">\mathbb{R}</span> né iniettivo (<span
+class="math inline">|-3| = |3|</span>).</p>
+<p><strong>A cosa serve.</strong> <span class="math inline">|x -
+y|</span> è la distanza tra due numeri: la definizione di limite si
+scrive <span class="math inline">|f(x) - L| &lt; \varepsilon</span>.</p>
+<hr />
+<h2 id="proprietà-del-valore-assoluto-slide-22">7. Proprietà del valore
+assoluto (slide 22)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>N.</th>
+<th>Proprietà</th>
+<th>Controllo con i numeri</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td><span class="math inline">\lvert x\rvert \ge 0</span></td>
+<td><span class="math inline">\lvert -3\rvert = 3 \ge 0</span></td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td><span class="math inline">\lvert x\rvert = 0 \iff x = 0</span></td>
+<td>solo <span class="math inline">\lvert 0\rvert = 0</span></td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td><span class="math inline">\lvert x\rvert = \lvert
+-x\rvert</span></td>
+<td><span class="math inline">\lvert 3\rvert = \lvert -3\rvert =
+3</span></td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td><span class="math inline">\lvert x\rvert^2 = x^2</span></td>
+<td><span class="math inline">\lvert -3\rvert^2 = 9 = (-3)^2</span></td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td><span class="math inline">\lvert xy\rvert = \lvert x\rvert\,\lvert
+y\rvert</span></td>
+<td><span class="math inline">\lvert -6\rvert = 6 = 2 \cdot
+3</span></td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td><span class="math inline">\left\lvert \frac{x}{y}\right\rvert =
+\frac{\lvert x\rvert}{\lvert y\rvert}</span>, <span
+class="math inline">y \ne 0</span></td>
+<td><span class="math inline">\lvert -2\rvert = 2 =
+\frac{6}{3}</span></td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td><span class="math inline">\lvert x+y\rvert \le \lvert x\rvert +
+\lvert y\rvert</span></td>
+<td>disuguaglianza triangolare</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><span class="math inline">\lvert x-y\rvert \ge \big\lvert \lvert
+x\rvert - \lvert y\rvert \big\rvert</span></td>
+<td><span class="math inline">x=5,\ y=-2</span>: <span
+class="math inline">7 \ge 3</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dimostrazione della 8.</strong> <span class="math inline">|x|
+= |(x - y) + y| \le |x - y| + |y|</span>, quindi <span
+class="math inline">|x| - |y| \le |x - y|</span>; scambiando <span
+class="math inline">x</span> e <span class="math inline">y</span>, <span
+class="math inline">|y| - |x| \le |x - y|</span>. Le due insieme, con
+<span class="math inline">|a| \le k \iff -k \le a \le k</span>, danno la
+tesi.</p>
+<p><strong>A cosa serve.</strong> La 4 è il trucco della disuguaglianza
+triangolare; la 5 e la 6 servono a spezzare i moduli nei limiti; la 8
+dice che se <span class="math inline">f(x)</span> è vicino a <span
+class="math inline">L</span> anche <span
+class="math inline">|f(x)|</span> è vicino a <span
+class="math inline">|L|</span>.</p>
+<hr />
+<h2 id="disuguaglianza-triangolare-slide-23">8. Disuguaglianza
+triangolare (slide 23)</h2>
+<p><strong>L’idea.</strong> Casa → bar → piazza: la distanza casa–piazza
+non supera mai la somma dei due tratti. Se torno indietro, sono più
+vicino di quanto ho camminato.</p>
+<p><strong>Con i numeri.</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">x</span></th>
+<th style="text-align: center;"><span class="math inline">y</span></th>
+<th style="text-align: center;"><span class="math inline">\lvert
+x+y\rvert</span></th>
+<th style="text-align: center;"><span class="math inline">\lvert x\rvert
++ \lvert y\rvert</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">5</span></td>
+<td style="text-align: center;"><span class="math inline">8</span></td>
+<td style="text-align: center;"><span class="math inline">8</span>
+(stesso segno: uguali)</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">-5</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">8</span>
+(segni opposti: minore)</td>
+</tr>
+</tbody>
+</table>
+<p>Passando ai quadrati con <span class="math inline">x = 3</span>,
+<span class="math inline">y = -5</span>: <span
+class="math inline">(x+y)^2 = 9 - 30 + 25 = 4</span> e <span
+class="math inline">(|x| + |y|)^2 = 9 + 30 + 25 = 64</span>. Cambia solo
+il termine centrale.</p>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">|x+y|^2 = (x+y)^2 = x^2 + 2xy + y^2 \le
+|x|^2 + 2|x|\,|y| + |y|^2 = (|x|+|y|)^2</span></p>
+<p>perché <span class="math inline">xy \le |xy| = |x|\,|y|</span>.
+Entrambi i membri sono <span class="math inline">\ge 0</span> e la
+radice è crescente, quindi <span class="math inline">|x+y| \le |x| +
+|y|</span>.</p>
+<p><strong>A cosa serve.</strong> È lo strumento principe per le stime
+nei limiti; dimostrazione classica dell’orale.</p>
+<hr />
+<h2 id="esercizi-sul-valore-assoluto-slide-24">9. Esercizi sul valore
+assoluto (slide 24)</h2>
+<p><strong><span class="math inline">|x| \le k \iff -k \le x \le
+k</span> (<span class="math inline">k \ge 0</span>).</strong> “Sto a non
+più di 3 km da casa” = sono tra il km <span
+class="math inline">-3</span> e il km <span
+class="math inline">3</span>. Dimostrazione nei due casi: per <span
+class="math inline">x \ge 0</span> diventa <span class="math inline">x
+\le k</span>; per <span class="math inline">x &lt; 0</span> diventa
+<span class="math inline">-x \le k</span>, cioè <span
+class="math inline">x \ge -k</span>. Serve a togliere i moduli: <span
+class="math inline">|f(x) - L| &lt; \varepsilon \iff L - \varepsilon
+&lt; f(x) &lt; L + \varepsilon</span>.</p>
+<p><strong><span class="math inline">x = 0 \iff |x| &lt;
+\varepsilon</span> per ogni <span class="math inline">\varepsilon &gt;
+0</span>.</strong> Solo lo zero passa con tutte le soglie. (<span
+class="math inline">\Rightarrow</span>) <span class="math inline">|0| =
+0 &lt; \varepsilon</span>. (<span class="math inline">\Leftarrow</span>)
+per contronominale: se <span class="math inline">x \ne 0</span>, con
+<span class="math inline">\varepsilon = \frac{|x|}{2}</span> la
+disuguaglianza <span class="math inline">|x| &lt; \frac{|x|}{2}</span> è
+falsa (con i numeri: <span class="math inline">x = 0{,}6</span>, <span
+class="math inline">\varepsilon = 0{,}3</span>). Serve per dimostrare
+che due numeri sono uguali, per esempio nell’unicità del limite.</p>
+<p><strong><span class="math inline">|x + 3| - |2x - 1| \le x +
+1</span>.</strong> I moduli cambiano riga in <span class="math inline">x
+= -3</span> e in <span class="math inline">x = \frac12</span>:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Zona</th>
+<th>Primo membro</th>
+<th>Disequazione</th>
+<th>Soluzione nella zona</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>A: <span class="math inline">x &lt; -3</span></td>
+<td><span class="math inline">(-x-3) - (-2x+1) = x - 4</span></td>
+<td><span class="math inline">-4 \le 1</span>, sempre vera</td>
+<td><span class="math inline">x &lt; -3</span></td>
+</tr>
+<tr class="even">
+<td>B: <span class="math inline">-3 \le x &lt; \frac12</span></td>
+<td><span class="math inline">(x+3) - (-2x+1) = 3x + 2</span></td>
+<td><span class="math inline">2x \le -1</span></td>
+<td><span class="math inline">-3 \le x \le -\frac12</span></td>
+</tr>
+<tr class="odd">
+<td>C: <span class="math inline">x \ge \frac12</span></td>
+<td><span class="math inline">(x+3) - (2x-1) = -x + 4</span></td>
+<td><span class="math inline">-2x \le -3</span></td>
+<td><span class="math inline">x \ge \frac32</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">S = \left(-\infty, -\tfrac12\right] \cup
+\left[\tfrac32, +\infty\right)</span></p>
+<p>Controlli: <span class="math inline">x = -10</span> sì, <span
+class="math inline">x = 0</span> no, <span class="math inline">x =
+1</span> no, <span class="math inline">x = 2</span> sì.</p>
+
+</main>
+<footer>Appunti personali di Pierluigi Ceccon · Analisi Matematica 1, Università di Udine.
+Le slide del docente non sono riprodotte qui.</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+document.querySelectorAll('.math').forEach(function (el) {
+  try {
+    katex.render(el.textContent, el, {displayMode: el.classList.contains('display'), throwOnError: false});
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

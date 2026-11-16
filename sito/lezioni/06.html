@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 LEZ UNIVERSITA&#x27; – Funzioni: definizioni di base</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="testata"><a href="../index.html">Analisi 1 · Lezioni 2026/27</a></header>
+<main>
+<h1 id="lez-universita-funzioni-definizioni-di-base">06 LEZ UNIVERSITA’
+– Funzioni: definizioni di base</h1>
+<ul>
+<li><strong>Docente:</strong> prof. Lorenzo Freddi – Analisi Matematica
+1, Università di Udine, a.a. 2026/27</li>
+<li><strong>Data della lezione:</strong> 02/10/2026, videolezione alla
+lavagna (ore 8:35, 1 h 8 min, e ore 9:53, 26 min)</li>
+<li><strong>Studiata in chat:</strong> 21/10/2026, 24/10/2026,
+02/11/2026, 08/11/2026</li>
+</ul>
+<p>Nei due video il prof lavora alla lavagna e non ci sono slide
+catturate: il contenuto è ricostruito dalla pres_02, slide 2–10 (il 6/10
+il prof riparte da «Funzioni composte», slide 11).</p>
+<h2 id="argomenti-trattati">Argomenti trattati</h2>
+<p>La lezione apre la presentazione pres_02 e arriva fino a «Funzioni
+composte» esclusa (<strong>slide 2–10</strong>).</p>
+<ol type="1">
+<li>Grafico di funzione come sottoinsieme di <span class="math inline">A
+\times B</span>; dominio, codominio, variabile, valore; notazione (slide
+2–3)</li>
+<li>Esempi: funzione costante, identità, restrizione (slide 4)</li>
+<li>Immagine e controimmagine (slide 5–6)</li>
+<li>Funzioni iniettive, suriettive, biiettive; l’esempio di <span
+class="math inline">x^2</span> con domini e codomini diversi (slide
+7–8)</li>
+<li>Lemma: se <span class="math inline">f</span> è iniettiva, <span
+class="math inline">f(x) = f(y) \iff x = y</span> (slide 9)</li>
+<li>Funzioni reali di variabile reale e dominio naturale (slide 10)</li>
+</ol>
+<h2 id="materiali-su-drive-solo-link">Materiali su Drive (solo
+link)</h2>
+<ul>
+<li><a
+href="https://drive.google.com/file/d/10cclpI1x6npMY6ImQ7oINCC6LCPRbUuO/view">2026_pres_02_funzioni.pdf</a>
+– slide del prof. Freddi (questa lezione: slide 2–10)</li>
+</ul>
+<hr />
+<h2 id="grafico-di-funzione-slide-23">1. Grafico di funzione (slide
+2–3)</h2>
+<p><strong>L’idea.</strong> Una funzione è un “registro”: a ogni
+elemento della partenza associa <strong>uno e un solo</strong> elemento
+dell’arrivo (come il registro dei mesi di nascita: ogni studente ha un
+solo mese, due studenti possono avere lo stesso mese).</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">A = \{-1, 0,
+1, 2\}</span>, <span class="math inline">B = \{-1, 0, 1, 2, 3\}</span>,
+<span class="math inline">F(x) = x^2 - 1</span></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">x</span></th>
+<th style="text-align: center;"><span
+class="math inline">F(x)</span></th>
+<th style="text-align: center;">coppia</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">-1</span></td>
+<td style="text-align: center;"><span class="math inline">1 - 1 =
+0</span></td>
+<td style="text-align: center;"><span class="math inline">(-1,
+0)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;"><span class="math inline">0 - 1 =
+-1</span></td>
+<td style="text-align: center;"><span class="math inline">(0,
+-1)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">1 - 1 =
+0</span></td>
+<td style="text-align: center;"><span class="math inline">(1,
+0)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">4 - 1 =
+3</span></td>
+<td style="text-align: center;"><span class="math inline">(2,
+3)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Disegno.</strong> Nella griglia <span class="math inline">A
+\times B</span> (20 punti) la funzione sceglie <strong>un punto per
+colonna</strong>: niente colonne vuote, niente colonne con due punti
+(test della retta verticale).</p>
+<p><strong>I simboli del prof.</strong> <span class="math inline">F
+\subseteq A \times B</span> è un grafico di funzione di dominio <span
+class="math inline">A</span> e codominio <span
+class="math inline">B</span> se</p>
+<p><span class="math display">\forall\, x \in A \ \ \exists!\, y \in B :
+(x,y) \in F</span></p>
+<ul>
+<li><span class="math inline">\forall x \in A</span>: nessuna colonna
+vuota; <span class="math inline">\exists!</span>: un solo punto per
+colonna.</li>
+<li>Al posto di <span class="math inline">(x,y) \in F</span> si scrive
+<span class="math inline">y = F(x)</span>: <span
+class="math inline">x</span> è la <strong>variabile</strong>, <span
+class="math inline">F(x)</span> il <strong>valore</strong> o
+<strong>immagine</strong> di <span class="math inline">F</span> in <span
+class="math inline">x</span>.</li>
+</ul>
+<p><span class="math display">F : A \to B, \qquad x \mapsto
+F(x)</span></p>
+<p><span class="math inline">F(x)</span> è la <strong>legge</strong>:
+può essere una formula (<span class="math inline">x^2 - 1</span>) o a
+casi (<span class="math inline">0</span> se <span class="math inline">x
+&gt; 7</span>, <span class="math inline">1</span> altrimenti). Una
+funzione può anche essere solo un elenco di coppie, senza formula.</p>
+<p><strong>A cosa serve.</strong> Una funzione sono <strong>tre cose
+insieme</strong>: dominio, codominio, legge (si vede al punto 4). Lo
+studio di funzione d’esame disegna proprio l’insieme delle coppie in
+<span class="math inline">\mathbb{R} \times \mathbb{R}</span>. Per la
+funzione inversa (slide 12–17) si scambiano le coppie <span
+class="math inline">(x,y) \to (y,x)</span>.</p>
+<hr />
+<h2 id="costante-identità-restrizione-slide-4">2. Costante, identità,
+restrizione (slide 4)</h2>
+<p><strong>L’idea.</strong> - <strong>Costante</strong>: un distributore
+guasto, qualunque tasto premi dà sempre caffè. -
+<strong>Identità</strong>: uno specchio, quello che entra esce uguale. -
+<strong>Restrizione</strong>: stesso registro, guardato solo per una
+parte della partenza.</p>
+<p><strong>Con i numeri</strong> (<span class="math inline">A =
+\{-1,0,1,2\}</span>):</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">x</span></th>
+<th style="text-align: center;">costante <span class="math inline">f(x)
+= 2</span></th>
+<th style="text-align: center;">identità <span
+class="math inline">\mathrm{id}_A(x) = x</span></th>
+<th style="text-align: center;"><span
+class="math inline">F(x)=x^2-1</span> ristretta a <span
+class="math inline">C=\{1,2\}</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">-1</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">-1</span></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">0</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>I simboli del prof.</strong></p>
+<p><span class="math display">\text{costante: } f(x_1) = f(x_2) \quad
+\forall\, x_1, x_2 \in A</span></p>
+<p><span class="math display">\mathrm{id}_A : A \to A, \qquad
+\mathrm{id}_A(x) = x</span></p>
+<p><span class="math display">f|_C : C \to B, \qquad x \mapsto f|_C(x)
+:= f(x) \qquad (C \subseteq A)</span></p>
+<p><strong>A cosa serve.</strong> Costante: derivata nulla su un
+intervallo ⇒ funzione costante (la “<span class="math inline">+c</span>”
+degli integrali). Identità: serve a definire l’inversa (<span
+class="math inline">g \circ f = \mathrm{id}_A</span>, <span
+class="math inline">f \circ g = \mathrm{id}_B</span>). Restrizione:
+serve a rendere invertibile una funzione (così nascono <span
+class="math inline">\sqrt{x}</span>, <span
+class="math inline">\arcsin</span>, <span
+class="math inline">\arccos</span>).</p>
+<hr />
+<h2 id="immagine-e-controimmagine-slide-56">3. Immagine e controimmagine
+(slide 5–6)</h2>
+<p><strong>L’idea.</strong> <strong>Immagine</strong>: do un gruppo di
+<span class="math inline">x</span> e chiedo quali risultati danno (si va
+<strong>avanti</strong>). <strong>Controimmagine</strong>: do un gruppo
+di risultati e chiedo quali <span class="math inline">x</span> ci
+finiscono (si va <strong>indietro</strong>).</p>
+<p><strong>Con i numeri</strong> (<span class="math inline">F(x) = x^2 -
+1</span> su <span class="math inline">A = \{-1,0,1,2\}</span>):</p>
+<ul>
+<li><span class="math inline">C = \{-1, 1, 2\}</span>: risultati <span
+class="math inline">0, 0, 3</span> → <span class="math inline">F(C) =
+\{0, 3\}</span> (i doppioni si scrivono una volta).</li>
+<li><span class="math inline">D = \{0, 1\}</span>: si passano
+<strong>tutti</strong> gli <span class="math inline">x</span> di <span
+class="math inline">A</span> e si tengono quelli con <span
+class="math inline">F(x) \in D</span> → <span
+class="math inline">F^{-1}(D) = \{-1, 1\}</span> (l’<span
+class="math inline">1</span> di <span class="math inline">D</span> non è
+colpito da nessuno, ed è permesso).</li>
+</ul>
+<p><strong>I simboli del prof.</strong> Sia <span class="math inline">f
+: A \to B</span>.</p>
+<p><span class="math display">f(C) := \{\, f(x) : x \in C \,\} \quad (C
+\subseteq A) \qquad\qquad f^{-1}(D) := \{\, x \in A : f(x) \in D \,\}
+\quad (D \subseteq B)</span></p>
+<p>Se <span class="math inline">C = A</span> si parla di
+<strong>immagine di <span class="math inline">f</span></strong>. Il
+simbolo <span class="math inline">f^{-1}(D)</span> esiste sempre:
+<strong>non</strong> vuol dire che <span class="math inline">f</span>
+sia invertibile.</p>
+<p><strong>A cosa serve.</strong> L’immagine di <span
+class="math inline">f</span> serve per la suriettività. La
+controimmagine è il nome preciso di <strong>risolvere un’equazione o
+disequazione</strong>: risolvere <span class="math inline">x^2 - 1 =
+0</span> è calcolare <span class="math inline">F^{-1}(\{0\})</span>;
+zeri e segno nello studio di funzione sono controimmagini.</p>
+<hr />
+<h2 id="iniettive-suriettive-biiettive-slide-78">4. Iniettive,
+suriettive, biiettive (slide 7–8)</h2>
+<p><strong>L’idea, con due controlli sulla colonna dei
+risultati.</strong></p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th></th>
+<th>controllo</th>
+<th>se passa</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>iniettiva</td>
+<td>nessun risultato si ripete (numeri diversi → risultati diversi)</td>
+<td><span class="math inline">f(x) = y</span> ha <strong>al massimo
+una</strong> soluzione</td>
+</tr>
+<tr class="even">
+<td>suriettiva</td>
+<td>ogni numero dell’arrivo <span class="math inline">B</span> compare
+tra i risultati</td>
+<td><span class="math inline">f(x) = y</span> ha <strong>almeno
+una</strong> soluzione</td>
+</tr>
+<tr class="odd">
+<td>biiettiva</td>
+<td>tutti e due</td>
+<td><span class="math inline">f(x) = y</span> ha <strong>esattamente
+una</strong> soluzione</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Con i numeri.</strong> - <span class="math inline">x^2</span>
+su <span class="math inline">\{-2,-1,0,1,2\}</span>: risultati <span
+class="math inline">4,1,0,1,4</span> → il <span
+class="math inline">1</span> e il <span class="math inline">4</span> si
+ripetono → <strong>non iniettiva</strong>. - <span
+class="math inline">2x+1</span> sugli stessi <span
+class="math inline">x</span>: risultati <span
+class="math inline">-3,-1,1,3,5</span>, nessuno si ripete →
+<strong>iniettiva</strong>. - <span class="math inline">x^2</span> con
+arrivo <span class="math inline">\{0,1,4\}</span> →
+<strong>suriettiva</strong>; con arrivo <span
+class="math inline">\{0,1,2,3,4\}</span> mancano <span
+class="math inline">2</span> e <span class="math inline">3</span> →
+<strong>non suriettiva</strong>. Stessi risultati, cambia solo <span
+class="math inline">B</span>.</p>
+<p><strong>I simboli del prof.</strong> <span class="math inline">f : A
+\to B</span> si dice</p>
+<ul>
+<li><strong>iniettiva</strong> se <span class="math inline">x_1 \neq x_2
+\implies f(x_1) \neq f(x_2)</span>, o equivalentemente <span
+class="math inline">f(x_1) = f(x_2) \implies x_1 = x_2</span>;</li>
+<li><strong>suriettiva</strong> se il codominio coincide con l’immagine:
+<span class="math inline">\forall\, y \in B\ \ \exists\, x \in A : y =
+f(x)</span>;</li>
+<li><strong>biiettiva</strong> se è sia iniettiva che suriettiva.</li>
+</ul>
+<p><strong>Esempio della slide 8</strong> (<span
+class="math inline">\mathbb{R}^+_0</span> = reali <span
+class="math inline">\geq 0</span>), stessa legge <span
+class="math inline">x^2</span>:</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>funzione</th>
+<th>dominio</th>
+<th>codominio</th>
+<th>iniettiva</th>
+<th>suriettiva</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">f</span></td>
+<td><span class="math inline">\mathbb{R}</span></td>
+<td><span class="math inline">\mathbb{R}</span></td>
+<td>no: <span class="math inline">f(-2) = f(2) = 4</span></td>
+<td>no: <span class="math inline">-1</span> non è mai un quadrato</td>
+<td>né l’una né l’altra</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">g</span></td>
+<td><span class="math inline">\mathbb{R}^+_0</span></td>
+<td><span class="math inline">\mathbb{R}</span></td>
+<td>sì (niente negativi in partenza)</td>
+<td>no: manca <span class="math inline">-1</span></td>
+<td>solo iniettiva</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">h</span></td>
+<td><span class="math inline">\mathbb{R}^+_0</span></td>
+<td><span class="math inline">\mathbb{R}^+_0</span></td>
+<td>sì</td>
+<td>sì: <span class="math inline">y = (\sqrt{y})^2</span></td>
+<td><strong>biiettiva</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Dominio o codominio diversi ⇒ funzioni diverse.</p>
+<p><strong>A cosa serve.</strong> Prossima lezione (slide 14): <span
+class="math inline">f</span> è <strong>invertibile se e solo se è
+biiettiva</strong>. L’inversa di <span class="math inline">h</span> è
+<span class="math inline">\sqrt{y}</span>; allo stesso modo nascono
+<span class="math inline">\ln x</span>, <span
+class="math inline">\arcsin x</span>, <span class="math inline">\arctan
+x</span>.</p>
+<hr />
+<h2 id="lemma-delle-funzioni-iniettive-slide-9">5. Lemma delle funzioni
+iniettive (slide 9)</h2>
+<p><strong>L’idea.</strong> Se <span class="math inline">f</span> è
+iniettiva, in <span class="math inline">f(a) = f(b)</span> si può
+<strong>“togliere la <span class="math inline">f</span>”</strong>.</p>
+<p><strong>Prima con i numeri.</strong> Il cubo è iniettivo (<span
+class="math inline">-2,-1,0,1,2 \mapsto -8,-1,0,1,8</span>): da <span
+class="math inline">a^3 = 8 = 2^3</span> segue <span
+class="math inline">a = 2</span>.</p>
+<p><strong>Poi con le lettere.</strong></p>
+<p><span class="math display">(x+1)^3 = (2x)^3 \iff x + 1 = 2x \iff x =
+1 \qquad \text{verifica: } 2^3 = 8 = 2^3</span></p>
+<p><strong>I simboli del prof.</strong></p>
+<blockquote>
+<p><strong>Lemma.</strong> Se <span class="math inline">f : A \to
+B</span> è iniettiva, allora per ogni <span class="math inline">x, y \in
+A</span>: <span class="math inline">\quad f(x) = f(y) \iff x =
+y</span>.</p>
+</blockquote>
+<p>Dimostrazione: <span class="math inline">\Leftarrow</span> vale
+perché <span class="math inline">f</span> è una funzione (stesso <span
+class="math inline">x</span>, stesso risultato); <span
+class="math inline">\Rightarrow</span> vale perché <span
+class="math inline">f</span> è iniettiva.</p>
+<p><strong>A cosa serve.</strong> Risolvere equazioni: <span
+class="math inline">e^a = e^b \iff a = b</span>, <span
+class="math inline">\ln a = \ln b \iff a = b</span>.
+<strong>Attenzione</strong>: il quadrato su <span
+class="math inline">\mathbb{R}</span> non è iniettivo, quindi da <span
+class="math inline">a^2 = b^2</span> non segue <span
+class="math inline">a = b</span> (es. <span class="math inline">(-2)^2 =
+2^2</span>).</p>
+<hr />
+<h2 id="funzioni-reali-e-dominio-naturale-slide-10">6. Funzioni reali e
+dominio naturale (slide 10)</h2>
+<p><strong>L’idea.</strong> La calcolatrice dà “Errore” per alcuni
+numeri (es. divisione per zero): il <strong>dominio naturale</strong> è
+l’insieme dei numeri per cui non dà errore.</p>
+<p><strong>Con i numeri.</strong> <span class="math inline">k(x) =
+\dfrac{x+3}{x-1}</span></p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">x</span></th>
+<th style="text-align: center;"><span
+class="math inline">x+3</span></th>
+<th style="text-align: center;"><span
+class="math inline">x-1</span></th>
+<th style="text-align: center;"><span
+class="math inline">k(x)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">-1</span></td>
+<td style="text-align: center;"><span class="math inline">-3</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">4</span></td>
+<td style="text-align: center;"><span class="math inline">0</span></td>
+<td style="text-align: center;"><strong>errore</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">5</span></td>
+<td style="text-align: center;"><span class="math inline">1</span></td>
+<td style="text-align: center;"><span class="math inline">5</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><span class="math inline">3</span></td>
+<td style="text-align: center;"><span class="math inline">6</span></td>
+<td style="text-align: center;"><span class="math inline">2</span></td>
+<td style="text-align: center;"><span class="math inline">3</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">x - 1 = 0 \iff x = 1</span>, quindi <span
+class="math inline">D = \mathbb{R} \setminus \{1\} = (-\infty, 1) \cup
+(1, +\infty)</span>: tutta la retta con un buco in <span
+class="math inline">1</span>.</p>
+<p><strong>I simboli del prof.</strong> <strong>Funzioni reali di una
+variabile reale</strong>: dominio e codominio sono sottoinsiemi di <span
+class="math inline">\mathbb{R}</span>. <strong>Dominio
+naturale</strong>: il più grande <span class="math inline">D \subseteq
+\mathbb{R}</span> tale che <span class="math inline">f(x)</span> ha
+senso per ogni <span class="math inline">x \in D</span>.</p>
+<p><strong>A cosa serve.</strong> È il primo passo dello studio di
+funzione d’esame. Regole: frazione → denominatore <span
+class="math inline">\neq 0</span>; radice quadrata → argomento <span
+class="math inline">\geq 0</span>; logaritmo → argomento <span
+class="math inline">&gt; 0</span>.</p>
+
+</main>
+<footer>Appunti personali di Pierluigi Ceccon · Analisi Matematica 1, Università di Udine.
+Le slide del docente non sono riprodotte qui.</footer>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script>
+document.querySelectorAll('.math').forEach(function (el) {
+  try {
+    katex.render(el.textContent, el, {displayMode: el.classList.contains('display'), throwOnError: false});
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

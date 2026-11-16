@@ -14,4 +14,4 @@ Si aggiorna ogni domenica alle 20:17 con l'attività «Aggiornamento Analisi 1»
 | 07 | 06/10/2026 | Funzione composta, funzione inversa, unicità dell'inversa, invertibile $\iff$ biiettiva | [07 LEZ UNIVERSITA'](<07%20LEZ%20UNIVERSITA'/LEZIONE.md>) |
 | 08 | 07/10/2026 | Grafico dell'inversa, funzioni monotone e disequazioni, valore assoluto, disuguaglianza triangolare | [08 LEZ UNIVERSITA'](<08%20LEZ%20UNIVERSITA'/LEZIONE.md>) |
 
-Ultimo aggiornamento: 2026-11-15
+Ultimo aggiornamento: 2026-11-16
